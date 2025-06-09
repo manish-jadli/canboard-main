@@ -19,12 +19,12 @@
         console.log("pop data - ", a);
 
 
-        Array.prototype .double=function(){
+        Array.prototype.double=function(){
             let temp=this;
-            console.log("Thisis a current calling function - ",this);
+            return temp.map((item)=> item *2);
         }
 
-        a.double();
+        console.log('Double the Array - ',a.double());
     </script>
     
 </body>
