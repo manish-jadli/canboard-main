@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+</head>
+<body>
+
+    <section>
+        <h1>Application</h1>
+    </section>
+
+    <script>
+        let a=[1,2,3,4];
+        a.push(10);
+        a.pop();
+        console.log("push data - ", a);
+        console.log("pop data - ", a);
+
+
+        Array.prototype .double=function(){
+            let temp=this;
+            console.log("Thisis a current calling function - ",this);
+        }
+
+        a.double();
+    </script>
+    
+</body>
+</html>
