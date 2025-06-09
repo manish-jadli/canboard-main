@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+   
+    <section>
+        <h1>Classes</h1>
+    </section>
+
+    <script>
+        // function Person(name,age){
+        //     this.name=name;
+        //     this.age=age;
+        // }
+        // let p1=new Person("sid",18);
+
+        class Person{
+            constructor(name, age){
+                this.name=name;
+                this.age=age;
+            }
+            greet(){
+                console.log("greet is calling");
+            }
+        }
+
+        class Student extends Person{
+            constructor(name, age, grade){
+                super(name,age);
+                this.grade=grade;
+            }
+
+            study(){
+                console.log("studies in " + this.grade);
+            }
+        }
+
+        class Teacher extends  Person{
+            constructor(name,age,subject){
+                super(name,age);
+                this.subject=subject;
+            }
+
+            teaches(){
+                console.log("teach " + this.subject);
+            }
+        }
+
+        //p1 would be able to access the properties of protoype of person using proto
+        //s1 is able to access properties of the prototype of student using proto
+        //the next proto is pointing to  p1
+
+        //proto of prototype of student has been pointed to the prototype of person
+
+        const p1=new Person("sid", 32);
+        const s1=new Student("sai", 27,"10");
+        const t1=new Teacher("Anshuman", 35,"Maths");
+        console.log("Person Data ",p1);
+        console.log("Student Data ",s1);
+        console.log("Teacher Data " ,t1);
+
+        p1.greet();
+        s1.study();
+        t1.teaches();
+
+        //p1.__proto__=Person.prototype;
+        //s1.__proto__=Student.prototype;
+
+        //Student.prototype.__proto__=Person.prototype
+
+    </script>
+
+</body>
+</html>
