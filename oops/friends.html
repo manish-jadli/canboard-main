@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+</head>
+<body>
+
+    <section>
+        <h1>Friends</h1>
+    </section>
+
+    <script>
+        var monica={
+            name:"monica geller",
+            total:400,
+            dedeuctMonthlyFee:function(fee){
+                this.total=this.total-fee;
+                return this.name + " remaining balance is " + this.total;
+            }
+        }
+
+        var rachel={name:'Rachel Green', total:1500};
+        console.log(monica.dedeuctMonthlyFee.call(rachel,10));
+    </script>
+    
+</body>
+</html>
