@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+</head>
+<body>
+
+    <section>
+        <h1>Call</h1>
+    </section>
+
+    <script>
+
+        //if i had someway to change the current calling object
+
+        //call
+        //call (new calling object, list of params needed)
+
+        //apply
+        //i will provie you with a way to change the current calling object
+        //apply(new calling object,[list of params])
+
+        var pokeman={
+            firstname:"Pika",
+            lastname:"Chu",
+            getPokeName:function(){
+                var fullname=this.firstname + ' ' + this.lastname;
+                return fullname;
+            }
+        };
+        var pokemonName=function(snack, hobby){
+            console.log(this.getPokeName() + ' Loves ' + snack + '  and ' + hobby);
+        };
+
+        //pokemonName("sushi","coding");
+        pokemonName.call(pokeman, "Sushi","Coding");
+        pokemonName.apply(pokeman,["Sushi", "Coding"]);
+        let boundPokemanName=pokemonName.bind(pokeman, "Sushi", "Coding");
+        boundPokemanName();
+    </script>
+    
+</body>
+</html>
