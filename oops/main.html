@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+
+<body>
+
+    <section>
+        <h1>Main</h1>
+    </section>
+
+    <script>
+
+        //find count fo repeat itme in a string
+
+        const data = "This is Interview";
+
+        //convert all the text in lowercase and remove the space
+        const data1 = data.toLowerCase().replace(/\s/g, "").split("");
+        const countdata = data1.reduce((total, current, index) => {
+            const todal = total[current] = (total[current] || 0) + 1;
+            console.log(total)
+            return total
+        }, {})
+
+        //result of this one
+
+        console.log(22 + "22") //2222
+        console.log(22 + null) //22
+        console.log(22 + "undefined") //22undefined
+
+        //output [1,2,3,4,5,6] how will code
+        let arry=[1,2,[3,4,[5,6]]];
+        const finalArray=arry.flat(Infinity);
+        console.log(finalArray)
+
+        //how to return {A1:20,A2:40,A5:70} like this format
+        const outputArray=[{name:"A1",sal:"20"},{name:"A2",sal:"40"},{name:"A5",sal:"70"}]
+       let outputData=outputArray.reduce((total,current,index)=>{
+            total[current.name]= +current.sal;
+            return total;
+        },{})
+        console.log(outputData)
+
+
+        //output for that
+
+        console.log([2] == [2]) //false (different refrence)
+console.log(0.1 + 0.2 === 0.3) //false (floating point precision)
+
+
+        //fnd the max ouput 
+
+        const maxarray=[10,390,900.53,345,0,134];
+        const maxArrayResult=Math.max(...maxarray);
+        console.log("max array reslut value is - ", maxArrayResult)
+
+        //fnd the min ouput 
+
+        const minarray=[10,390,900.53,345,0,134];
+        const minArrayResult=Math.min(...minarray);
+        console.log("min array reslut value is - ", minArrayResult)
+
+
+        //find the sume of the array
+
+        const sumArray=[1,4,2,6,7];
+        let totalSum=0;
+        sumArray.filter(item=>{totalSum+=item;return false;});
+        console.log("sum of array is - ", totalSum)
+
+        //remove the deuplicate value of array
+
+        const duplicateArray=[1,2,2,3,3,4,4,1,5,2,7];
+
+        //using by set 
+        const showDuplicateArray=[...new Set(duplicateArray)];
+        console.log("remove duplicate record in array is - ", showDuplicateArray)
+
+
+    </script>
+
+</body>
+
+</html>
