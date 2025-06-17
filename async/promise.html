@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <section>
+        <h1>Promise</h1>
+    </section>
+
+    <script>
+        let p=new Promise(function(resolve,reject){
+            //resolve(1);
+            reject(10);
+        });
+
+        p.then(
+        function(result){
+            console.log(result);
+        },
+        function(error){
+            console.log(error);
+        }
+    )
+    </script>
+    
+</body>
+</html>

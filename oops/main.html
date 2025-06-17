@@ -92,8 +92,43 @@
             return total
         },[])
 
-        console.log("remove duplicate record in array is - ", showDuplicateArray)
+        console.log("remove duplicate record in array is - ", showDuplicateArray);
 
+        //clean true and falsy value from array
+
+        const falsyArray=["Welcome", false, "to", true ,"your",false,"home"];
+        const cleanFalsyArray=falsyArray.filter(item=> typeof item !=="boolean");
+        console.log('remove true and falsy value - ', cleanFalsyArray);
+
+        //clean falsy value from array
+
+        const falArray=["Welcome", false, "you", "can", false, "get", "it"];
+        const cleanFalArray=falArray.filter(item=> !!item);
+        console.log("remove only false value - ", cleanFalArray);
+
+        //remove the number and boolean value from the array
+
+        const numBolArray=["Hello",1,"Welcome",false,2, "to",2,"you"];
+        const cleanNumBolArray=numBolArray.filter(item => typeof item !=="boolean" && typeof item !=="number");
+        console.log("reomve the number and boolean value - ", cleanNumBolArray);
+
+        //reverse a string 
+
+        const reverseString="string";
+        const realReverseString=reverseString.split("").reverse().join("");
+        console.log('reverse a string - ', realReverseString);
+
+        //splitting a string into array
+
+        const splitrray="one, two, three, four, five";
+        const realSplitArray=splitrray.split(", ");
+        console.log('split a array - ', realSplitArray);
+
+        //mapping value length
+
+        const mapValue=["one","two", "three", "four"];
+        const realMapValue=mapValue.map(item=>item.length);
+        console.log("Map value lenght is - ", realMapValue);
 
     </script>
 
