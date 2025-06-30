@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    
+    <section>
+        <h1>Fetch</h1>
+    </section>
+
+    <script>
+        //fetch return a promise
+        fetch('https://602fc537a1e9d20017af105e.mockapi.io/api/v1/products').then(function(res){
+            const apiData=res.json();
+            console.log(apiData)
+        },function(err){
+            console.log(err)
+        })
+    </script>
+
+</body>
+</html>
