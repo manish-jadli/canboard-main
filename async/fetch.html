@@ -14,12 +14,14 @@
     <script>
         //fetch return a promise
         fetch('https://602fc537a1e9d20017af105e.mockapi.io/api/v1/products').then(function(res){
-            const apiData=res.json();
-            console.log(apiData)
+            console.log(res)
+            return res.json();
         },function(err){
             console.log(err)
+        }).then(function(res){
+            console.log(res);
         })
-    </script>
+    </script> 
 
 </body>
 </html>
