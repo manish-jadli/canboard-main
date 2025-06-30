@@ -28,6 +28,15 @@
         }).catch(function(err){
             console.log(err);
         })
+
+
+        new Promise(function(resolve,reject){
+            setTimeout(() => resolve(10), 1000);
+        }).then(function(res){
+            console.log(res);
+        }).catch(function(err){
+            console.log(err);
+        })
     </script>
 
 </body>
