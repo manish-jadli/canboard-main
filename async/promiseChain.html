@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chain</title>
+</head>
+
+<body>
+
+    <section>
+        <h1>Promise Chain</h1>
+    </section>
+
+    <script>
+        new Promise(function (resolve, reject) {
+            setTimeout(() => resolve(1), 1000);
+        }).then(function (result) {
+            console.log(result);
+            return result*2;
+        }).then(function(res){
+            console.log(res);
+            return res*2;
+        }).then(function(res){
+            console.log(res);
+            return res*2;
+        })
+    </script>
+
+</body>
+
+</html>
